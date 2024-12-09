@@ -92,8 +92,8 @@
     script_command_port:=50004
     trajectory_port:=50003
     non_blocking_read:=true
-    keep_alive_count:=2"
-
+    keep_alive_count:=2
+    ft_sensor_exponential_filter_alpha:=1.0"
     >
 
     <!-- Load configuration data from the provided .yaml files -->
@@ -139,6 +139,7 @@
         trajectory_port="${trajectory_port}"
         non_blocking_read="${non_blocking_read}"
         keep_alive_count="${keep_alive_count}"
+        ft_sensor_exponential_filter_alpha="${ft_sensor_exponential_filter_alpha}"
         />
     </xacro:if>
 

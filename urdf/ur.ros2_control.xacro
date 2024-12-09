@@ -21,6 +21,7 @@
     trajectory_port:=50003
     non_blocking_read:=true
     keep_alive_count:=2
+    ft_sensor_exponential_filter_alpha:=1.0
     ">
 
     <ros2_control name="${name}" type="system">
@@ -64,6 +65,7 @@
           <param name="tool_device_name">${tool_device_name}</param>
           <param name="tool_tcp_port">${tool_tcp_port}</param>
           <param name="keep_alive_count">${keep_alive_count}</param>
+          <param name="ft_sensor_exponential_filter_alpha">${ft_sensor_exponential_filter_alpha}</param>
         </xacro:unless>
       </hardware>
       <joint name="${tf_prefix}shoulder_pan_joint">
